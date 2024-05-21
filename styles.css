@@ -14,6 +14,11 @@
       padding:0;
     }
 
+    html {
+      scroll-padding-top: 86px; /* Ajusta este valor según lo necesites */
+      scroll-behavior: smooth;
+  }
+
     
     /* Add background image to the body */
     body {
@@ -25,6 +30,17 @@
       color: var(--color-white);
       /* Additional styles for better readability */
     }
+
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.4); /* Ajusta la opacidad según sea necesario */
+      z-index: -1; /* Coloca la superposición detrás del contenido */
+  }
 
     a{
       text-decoration: none;
@@ -135,26 +151,78 @@
     }
   }
 
-
+ /*General Background*/
   .hero{
     display: flex;
     justify-content: center; /* Centra horizontalmente */
     align-items: center; /* Centra verticalmente */
     width: 100%;
-    height: auto;
+    height: 100vh;
     background-color:;
-    opacity: 0.9;   
+    opacity: 1; 
   }
 
   .hero img{
     width: 49%;
     max-height: 100%;
     object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
+    border: 2px double var(--color-principal);
   } 
+
+
+  .scroll-down {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.scroll-down a {
+    display: inline-block;
+    text-decoration: none;
+}
+
+.scroll-down span {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-bottom: 2px solid var(--color-principal);
+    border-right: 2px solid var(--color-principal);
+    transform: rotate(45deg);
+    margin: -10px;
+    animation: scroll-down 1s infinite;
+}
+
+.scroll-down span:nth-child(1) {
+    animation-delay: 0s;
+}
+
+.scroll-down span:nth-child(2) {
+    animation-delay: 0.15s;
+}
+
+.scroll-down span:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
+@keyframes scroll-down {
+    0% {
+        opacity: 0;
+        transform: rotate(45deg) translate(-20px, -20px);
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+        transform: rotate(45deg) translate(20px, 20px);
+    }
+}
+
 
   .gral-background{
     margin-top: 20px;
-    max-width: 50%;
+    max-width: 70%;
   } 
 
     .clear{
@@ -162,6 +230,8 @@
     }
 
     .section{ 
+      height: 100vh;
+      width: 100%;
       background-color: var(--color-black);
       border: 2px double var(--color-principal);
       margin: 20px auto;  
@@ -250,6 +320,9 @@
     height: auto; /* Maintain aspect ratio */
   }
 
+
+  /*Download*/
+
   .download-box{
     
     width: 100%;
@@ -293,13 +366,13 @@
     text-align: end;
     padding: 2px 10px;
     color: #830000;
-    border: 2px solid #b42b2b;
-
-    
-    
-
+    border: 2px solid #b42b2b;  
   }
 
+
+  .h-100 {
+    height: 100%;
+}
 
 
   
