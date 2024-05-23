@@ -44,9 +44,7 @@
 
     a{
       text-decoration: none;
-    }
-
-    
+    }    
 
     .menu-btn{
       color: var(--color-gray);
@@ -163,10 +161,10 @@
   }
 
   .hero img{
-    width: 49%;
+    width: 100%;
     max-height: 100%;
     object-fit: cover; /* Ajusta la imagen para cubrir el contenedor */
-    border: 2px double var(--color-principal);
+    /* border: 2px double var(--color-principal); */
   } 
 
 
@@ -318,6 +316,19 @@
     margin: 10px auto; /* Add margin to center images vertically */
     max-width: 100%; /* Ensure images don't exceed container width */
     height: auto; /* Maintain aspect ratio */
+  }
+
+
+.img-div{
+  overflow: hidden;
+  position: relative;
+}
+
+  .img-encuadre{
+    position: absolute;
+    object-fit: cover;
+    object-position: center;
+    
   }
 
 
