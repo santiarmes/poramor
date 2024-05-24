@@ -33,7 +33,7 @@ const cardsData = [
   // Function to generate HTML markup for a card
   function createCardHTML(card) {
     return `
-      <div class="col-md-12">
+      <div class="col-md-4">
         <div class="card rounded-0 border-2 border-light text-light">
           <img src="${card.imageUrl}" class="card-img-top" alt="${card.title}">
           <div class="card-body">
@@ -45,25 +45,59 @@ const cardsData = [
       </div>
     `;
   }
+
+  createCardHTML();
   
-// Function to add cards to the carousel
-function addCardsToCarousel() {
-    cardsData.forEach((card, index) => {
-      const cardHTML = createCardHTML(card);
-      const carouselItem = document.createElement('div');
-      carouselItem.classList.add('carousel-item');
-      if (index === 0) {
-        carouselItem.classList.add('active');
-      }
-      carouselItem.innerHTML = `
-        <div class="row">
-          ${cardHTML}
-        </div>
-      `;
-      document.querySelector('.prensa-carousel-inner').appendChild(carouselItem);
-    });
+
+// Función para añadir las tarjetas al contenedor
+function addCardsToPage(cards, prensaCarouselInner) {
+  const container = document.getElementById(prensaCarrouselInner);
+  if (!container) {
+    console.error('Container not found');
+    return;
   }
+
+  let cardsHTML = '';
+  cards.forEach(card => {
+    cardsHTML += createCardHTML(card);
+  });
+  container.innerHTML = cardsHTML;
+}
+
+
+document.addEventListener('DOMContentLoaded', function() {
+  addCardsToPage(cards, 'prensaCarouselInner');
+});
+
+
+
+
+
+
+
+
+
+
+// // Function to add cards to the carousel
+// function addCardsToCarousel() {
+//     cardsData.forEach((card, index) => {
+//       const cardHTML = createCardHTML(card);
+//       const carouselItem = document.createElement('div');
+//       carouselItem.classList.add('carousel-item');
+//       if (index === 0) {
+//         carouselItem.classList.add('active');
+//       }
+//       carouselItem.innerHTML = `
+//         <div class="row">
+//           ${cardHTML}
+//           ${cardHTML}
+//           ${cardHTML}
+//         </div>
+//       `;
+//       document.querySelector('.prensa-carousel-inner').appendChild(carouselItem);
+//     });
+//   }
   
-  // Call the function to add cards to the carousel
-  addCardsToCarousel();
+//   // Call the function to add cards to the carousel
+//   addCardsToCarousel();
   
