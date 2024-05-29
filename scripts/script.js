@@ -6,7 +6,7 @@
   });
 
 
-  const imageNames = Array.from({ length: 159 }, (_, i) => `image${i + 1}`);
+  const imageNames = Array.from({ length: 154 }, (_, i) => `image${i + 1}`);
   let currentIndex = 0;
   
   document.addEventListener('DOMContentLoaded', () => {
