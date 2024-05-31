@@ -61,5 +61,32 @@ function hideImage(event) {
   }
 }
   
+function openTab(evt, tabName) {
+  // Declarar todas las variables
+  var i, tabcontent, tablinks;
+
+  // Ocultar todo el contenido de las solapas
+  tabcontent = document.getElementsByClassName("tab-content");
+  for (i = 0; i < tabcontent.length; i++) {
+      tabcontent[i].style.display = "none";
+  }
+
+  // Eliminar la clase "active" de todos los enlaces de las solapas
+  tablinks = document.getElementsByClassName("tab-link");
+  for (i = 0; i < tablinks.length; i++) {
+      tablinks[i].className = tablinks[i].className.replace(" active", "");
+  }
+
+  // Mostrar la solapa actual y añadir una clase "active" al botón que abrió la solapa
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+// Mostrar la primera solapa por defecto
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementsByClassName("tab-content")[0].style.display = "block";
+});
+
+
 
 

@@ -143,6 +143,57 @@
     </div>
   </section>  
 
+  <section id="participa" class="section position-relative">
+    <div class="row h-100">
+      <div class="col-md-12 h-100">
+        <div class="position-relative h-100 img-div">
+          <img src="img/sections/participa.jpg" class="img-fluid img-encuadre" alt="Graffiti Image">
+          
+          <div class="info-box">
+            <img src="img/sections/participa-fondo.jpg" class="contacto-fondo" alt="">
+            <p class="participa-text">El 6 y 7 de Noviembre, comenzó una campaña de cientos de ciudades del Continente Americano, una acción urbana que consiste en pintar una frase  de Prevencion:
+              <br>
+              <br>
+              <strong>"POR AMOR USÁ PRESERVATIVO"</strong>
+              <br> 
+              <br>             
+              Miles de personas de toda América desde Canadá hasta Ushuaia estaremos escribiendo la misma frase simultáneamente en distintos idiomas, enviando un mensaje directo de amor y conciencia.
+              <br>      
+              <br>        
+              A los que tengan ganas de hacer algo para prevenir el Sida, los invitamos a ser parte de esta movida de la manera que mas les guste. Son muchas las formas en las que podemos ayudarnos.
+              <br>  
+              <br>            
+              Dado el éxito de esta acción, y con el fin de fortalecer este mensaje en zonas que aun no tienen su mural o su graffiti, se extiende la convocatoria durante todos los fines de semana de Noviembre y Diciembre del 2004.
+              <br>   
+              <br>           
+              El exito de esta campaña, depende de la participacion de Todos.
+              <br>
+              <br>
+              
+              <a href="#accion"><span> - ¿Querés pintar?</span></a>
+              <br>
+              <br>
+              
+              <a href="#posproduccion"> - ¿Querés colaborar?</a>
+              <br>
+              <br>
+              
+              <a href="#preproduccion"> - ¿Otras formas de ayudar</a>
+              <br>
+              <br>              
+              
+            
+            <a href="#preproduccion"> <p style="background-color: #FC00E1;padding: 5px;"><b>1  La Preproducción</b></p></a>
+            <a href="#accion"> <p style="background-color: #019948;padding: 5px;"><b>2  La Acción</b></p></a>
+            <a href="#posproduccion"> <p style="background-color: #2548C9;padding: 5px;"><b>3  La Posproducción</b></p></a>
+             
+              
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
   <section id="comoParticipar" class="section position-relative">
     <div class="row h-100">
       <div class="col-md-12 h-100">
@@ -285,14 +336,33 @@ Para que como vos, tus conocidos tengan la oportunidad de participar de la maner
 
   </section>
 
+  
+
   <section id="prensa" class="section position-relative">
     <div class="row h-100">
       <div class="col-md-12 h-100">
         <div class="position-relative h-100">          
           <div class="info-box-prensa">
               <h2>PRENSA</h2> 
-              <div class="gallery-prensa" id="gallery-prensa"></div>             
+              <div class="tab-container">
+                <div class="tabs">
+                    <button class="tab-link active" onclick="openTab(event, 'tab1')">1994</button>
+                    <button class="tab-link" onclick="openTab(event, 'tab2')">2004</button>
+                </div>
+                <div id="tab1" class="tab-content">
+                    <h2>1994</h2>
+                    <p>Notas de prensa</p>
+                    <div class="gallery-prensa" id="gallery-prensa"></div>   
+                </div>
+                <div id="tab2" class="tab-content" style="display:none">
+                    <h2>2004</h2>
+                    <p>Notas de prensa y portales</p>
+                    <div class="gallery-prensa" id="gallery-prensa-2004"></div> 
+                </div>
+            </div>                        
           </div>
+
+
 
                <!-- Lightbox -->
             <div id="lightbox-prensa" class="lightbox">
@@ -301,6 +371,18 @@ Para que como vos, tus conocidos tengan la oportunidad de participar de la maner
                   <div id="lightbox-inner-content"></div>
               </div>
             </div>
+
+
+                <!-- Lightbox -->
+                <div id="lightbox-prensa-2004" class="lightbox">
+                  <div class="lightbox-content">
+                      <span id="lightbox-close" class="close"></span>
+                      <div id="lightbox-inner-content-2004"></div>
+                  </div>
+                </div>
+
+
+
           </div> 
             <!-- <button id="prevBtn" class="nav-btn" onclick="prevImage()">&#10094;</button>
             <img id="lightbox-img" src="" alt="">
