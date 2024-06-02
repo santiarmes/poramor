@@ -174,6 +174,8 @@ const cardsData = [
 },
 ];
 
+let currentIndexprensa = 0;
+
 document.addEventListener('DOMContentLoaded', () => {
     const gallery = document.getElementById('gallery-prensa');
 
@@ -206,35 +208,57 @@ document.addEventListener('DOMContentLoaded', () => {
     lightbox.addEventListener('click', hidePrensa);
 });
 
+
+
 function showImagePrensa(index) {
+    currentIndexprensa = index;
     const lightbox = document.getElementById('lightbox-prensa');
     const lightboxContent = document.getElementById('lightbox-inner-content');
 
     const card = cardsData[index];
 
-    // Asegúrate de que la información está disponible
+    
     if (card) {
         lightboxContent.innerHTML = `
-             <div class="infoPrensa">
-
+        <div class="infoPrensa">
             <div class="row">
-    <div class="col-6">
-        <h2>${card.title}</h2>
-            <h3>${card.subtitle}</h3>
-            <p>${card.description}</p>
-    </div>
-    <div class="col-6 border-start  border-1 text-center">
-        <img src="${card.imageUrl}" alt="${card.title} class="">
-    </div>
-</div>
-
+                <div class="col-6">
+                    <h2>${card.title}</h2>
+                    <h3>${card.subtitle}</h3>
+                    <p>${card.description}</p>
+                </div>
+                <div class="col-6 text-end">
+                    <img src="${card.imageUrl}" alt="${card.title} class="">
+                </div>
             </div>
+        </div>
         `;
 
-        lightbox.style.display = 'block';
+        lightbox.style.display = 'flex';
     } else {
         console.error('No data found for the selected index');
     }
+}
+
+
+function prevprensa(event) {
+    if (currentIndex > 0) {
+        currentIndex--;
+    } else {
+        currentIndex = cardsData.length - 1;
+    }
+    console.log('Current index:', currentIndex);  // Verificar el valor de currentIndex
+    showImagePrensa(currentIndex);
+}
+
+function nextprensa(event) {
+    if (currentIndex < cardsData.length - 1) {
+        currentIndex++;
+    } else {
+        currentIndex = 0;
+    }
+    console.log('Current index:', currentIndex);  // Verificar el valor de currentIndex
+    showImagePrensa(currentIndex);
 }
 
 function hidePrensa(event) {
@@ -254,7 +278,7 @@ function hidePrensa(event) {
 
 
 const basePathPrensa2004 = '/img/prensa/prensa2004/prensaThumbnails/';
-const imagePrensa2004Names = Array.from({ length: 2 }, (_, i) => `prensaThumbnail${i + 1}`);
+const imagePrensa2004Names = Array.from({ length: 50 }, (_, i) => `prensa${i + 1}`);
 const cardsPrensa2004Data = [
     //1
     {

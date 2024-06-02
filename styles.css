@@ -253,7 +253,16 @@
 
   h2{
     color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 700;
   }
+
+  h3{
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 600;
+  }
+
 
   p{
     color: white;
@@ -362,6 +371,9 @@
     object-position: center;    
   }
 
+
+
+
   /*Gallery*/
   .gallery {
     display: flex;
@@ -392,7 +404,7 @@
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  justify-content: center;
+  justify-content:space-around;
   align-items: center;
   z-index: 1000;
 }
@@ -412,7 +424,7 @@
   margin: 0px;
 }
 
-.lightbox-prensa {
+/* .lightbox-prensa {
   display: none;
   position: relative;
   top: 0;
@@ -421,27 +433,36 @@
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 1000;
-}
+} */
 
 #lightbox-inner-content{
-  background-color: aqua;
-  position: absolute;
-  width: 600px;  
-  height: 100vh;  
+  display: flex;
+  flex-wrap: wrap;
+  /* position: fixed;
+  max-width: 90%; 
+  max-height: 90%;  
   top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  /* Alinea verticalmente */
+  left: 50%; */
+  /* transform: translate(-50%, -50%); */
+  max-width: 60%;
+  max-height: 70%;
+  box-sizing: border-box
 }
 
 .infoPrensa{
   background-color: var(--color-principal);
-  margin: 0 auto;
-  width: 600px;
-  height: 100%;
-  padding: 20px;   
-  position: absolute;  
+  width: 100%;
+  height: auto;
+  padding: 20px;  
+  overflow: auto; 
+  border: 3px double #fff;
+  display: flex;
+  flex-wrap: wrap;
+  
+}
 
+.infoPrensa img{
+height: auto;
 }
 
 
@@ -484,8 +505,7 @@
 }
 
 
-.nav-btn {
-  position: absolute;
+.nav-btn {  
   top: 50%;
   font-size: 2em;
   color: white;
@@ -494,20 +514,34 @@
   cursor: pointer;
   padding: 0 10px;
   user-select: none;
+  display: flex;
+  
+
 }
 
-#prevBtn {
-  left: 550px;
+#prevBtn {    
+  flex: 0 0 auto; 
 }
 
-#nextBtn {
-  right: 550px;
+#nextBtn {  
+  flex: 0 0 auto; 
 }
 
 #closeBtn{
   top: 275px;
   right: 749px;
 }
+
+#prevBtnprensa {
+  display: flex; 
+}
+
+#nextBtnprensa {
+  display: flex;   
+}
+
+
+
 
 
 
