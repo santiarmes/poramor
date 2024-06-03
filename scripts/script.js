@@ -90,3 +90,30 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+//backgrounds
+
+document.addEventListener("DOMContentLoaded", function() {
+  // Definimos un objeto con los IDs y las URLs de las imágenes de fondo
+  const backgrounds = {
+      participa: 'img/sections/participa-fondo.jpg',
+      contacto: 'img/sections/contacto-fondo.jpg',
+        };
+
+  // Seleccionamos todos los elementos con la clase 'section'
+  const infoboxs = document.querySelectorAll('.info-box');
+
+  infoboxs.forEach(infobox => {
+      // Obtenemos el ID del elemento actual
+      const id = infobox.id;
+      console.log();
+
+      // Si el ID está en el objeto backgrounds, cambiamos la imagen de fondo
+      if (backgrounds[id]) {
+          infobox.style.backgroundImage = `url(${backgrounds[id]})`;
+      }
+  });
+});
+
+
+
+
