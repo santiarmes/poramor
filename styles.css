@@ -547,9 +547,7 @@ height: auto;
   cursor: pointer;
   padding: 0 10px;
   user-select: none;
-  display: flex;
-  
-
+  display: flex; 
 }
 
 #prevBtn {    
@@ -561,8 +559,27 @@ height: auto;
 }
 
 #closeBtn{
-  top: 275px;
-  right: 749px;
+  position: absolute;
+  top: 24%;
+  left:57%; 
+}
+
+@media(max-width:1475px){
+  #closeBtn{
+    left:59%;
+  }
+}
+
+@media(max-width:658px){
+  #closeBtn{
+    left:69%;
+  }
+}
+
+@media(max-width:415px){
+  #closeBtn{
+    left:82%;
+  }
 }
 
 #prevBtnprensa {

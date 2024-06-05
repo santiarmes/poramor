@@ -36,8 +36,15 @@
     lightboxImg.src = `${basePath}${imageNames[currentIndex]}.jpg`;
     lightbox.style.display = 'flex';
   }
-  
+
  
+ const closeBtn = document.getElementById('closeBtn');
+
+  function closeLightbox(){
+    const lightbox = document.getElementById('lightbox');
+    lightbox.style.display = 'none';  
+  }
+  
   
   function prevImage(event) {
     // event.stopPropagation();

@@ -196,11 +196,11 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Element with id "gallery-prensa" not found.');
     }
 
-    // Cerrar el lightbox cuando se hace clic en el botón de cierre
-    // const closeBtn = document.getElementById('lightbox-close');
-    // closeBtn.onclick = () => {
-    //     const lightbox = document.getElementById('lightbox-prensa');
-    //     lightbox.style.display = 'none';
+    //  Cerrar el lightbox cuando se hace clic en el botón de cierre
+    //  const closeBtn = document.getElementById('closeBtn');
+    //  closeBtn.onclick = () => {
+    //      const lightbox = document.getElementById('lightbox-prensa');
+    //      lightbox.style.display = 'none';
     // };
 
     // Cerrar el lightbox cuando se hace clic fuera del contenido del lightbox
