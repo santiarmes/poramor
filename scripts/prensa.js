@@ -222,12 +222,12 @@ function showImagePrensa(index) {
         lightboxContent.innerHTML = `
         <div class="infoPrensa">
             <div class="row">
-                <div class="col-6">
+                <div class="col-md-6 col-sm-12">
                     <h2>${card.title}</h2>
                     <h3>${card.subtitle}</h3>
                     <p>${card.description}</p>
                 </div>
-                <div class="col-6 text-end">
+                <div class="col-md-6 col-sm-12 text-center">
                     <img src="${card.imageUrl}" alt="${card.title} class="">
                 </div>
             </div>
@@ -261,6 +261,12 @@ function nextprensa(event) {
     showImagePrensa(currentIndex);
 }
 
+function closeLightboxPrensa(){
+    const lightbox = document.getElementById('lightbox-prensa');
+    lightbox.style.display = 'none';  
+  }
+
+
 function hidePrensa(event) {
     if (event.target.id === 'lightbox-prensa') {
         const lightbox = document.getElementById('lightbox-prensa');
@@ -275,7 +281,7 @@ function hidePrensa(event) {
 
 
 const basePathPrensa2004 = '/img/prensa/prensa2004/prensaThumbnails/';
-const imagePrensa2004Names = Array.from({ length: 50 }, (_, i) => `prensa${i + 1}`);
+const imagePrensa2004Names = Array.from({ length: 46 }, (_, i) => `prensa${i + 1}`);
 const cardsPrensa2004Data = [
     //1
     {
@@ -287,123 +293,317 @@ const cardsPrensa2004Data = [
     //2
     {
         title: `Cuyo noticias`,
-        subtitle: "",
+        subtitle: "Mendoza",
         imageUrl: "img/prensa/prensa2004/prensa2.jpg",
         description: ``
     },
     //3
     {
-        title: `Recorte clarin`,
+        title: `Recorte`,
         subtitle: ``,
         imageUrl: "img/prensa/prensa2004/prensa3.jpg",
         description: ``
     },
     //4
     {
-        title: `Recorte clarin`,
+        title: `Recorte`,
         subtitle: ``,
         imageUrl: "img/prensa/prensa2004/prensa4.jpg",
         description: ``
     },
     //5
     {
-        title: `Recorte diario Clarin`,
+        title: `Recorte`,
         subtitle: ``,
         imageUrl: "img/prensa/prensa2004/prensa5.jpg",
         description: ``
     },
     //6    
     {
-        title: `Recorte diario Clarin`,
+        title: `Paredes que hablan`,
         subtitle: ``,
         imageUrl: "img/prensa/prensa2004/prensa6.jpg",
         description: ``
     },
     //7
     {
-        title: `Recorte revista`,
+        title: `Siempre con globito`,
         subtitle: ``,
         imageUrl: "img/prensa/prensa2004/prensa7.jpg",
         description: ``
     },
     //8
     {
-        title: `Tapa Suplemento NO`,
-        subtitle: ``,
+        title: `x amor usá`,
+        subtitle: `Suplemento NO`,
         imageUrl: "img/prensa/prensa2004/prensa8.jpg",
         description: ``
     },
     //9 
     {
-        title: `Suplemento NO: Nota`,
+        title: `Ponele la firma`,
         subtitle: ``,
         imageUrl: "img/prensa/prensa2004/prensa9.jpg",
         description: ``
     },
-    //10 graffitis por amor
+    //prensa 10 
     {
         title: `Diario El Sureño`,
-        subtitle: ``,
-        imageUrl: "img/prensa/prensa2004/prensa1.jpg",
+        subtitle: `Ushuaia`,
+        imageUrl: "img/prensa/prensa2004/prensa10.jpg",
         description: ``
     },
     //prensa 11
     {
-        title: `TIEMPOS`,
-        subtitle: ``,
+        title: `Pintadas de campaña`,
+        subtitle: `Tiempos`,
         imageUrl: "img/prensa/prensa2004/prensa11.jpg",
         description: ` `
     },
 //prensa 12
 {
-    title: `Nota`,
+    title: `Por amor`,
     subtitle: ``,
     imageUrl: "img/prensa/prensa2004/prensa12.jpg",
     description: ``
 },
 //prensa 13
 {
-    title: `Flyer Fiesta Electron`,
-    subtitle: ``,
+    title: `Fiesta Electron`,
+    subtitle: `Flyer`,
     imageUrl: "img/prensa/prensa2004/prensa13.jpg",
     description: ``
 },
 //prensa 14
 {
-    title: `Graffiti en Brasil`,
-    subtitle: ``,
+    title: `Graffiti`,
+    subtitle: `Brasil`,
     imageUrl: "img/prensa/prensa2004/prensa14.jpg",
     description: ``
 },
 //prensa 15
 {
-    title: `Palermo Online`,
-    subtitle: ``,
+    title: `Pintan murales en escuelas`,
+    subtitle: `Palermo online`,
     imageUrl: "img/prensa/prensa2004/prensa15.jpg",
     description: ` `
 },
 //prensa 16
 {
     title: `Agencia de noticias da AIDS `,
-    subtitle: ``,
+    subtitle: `Brasil`,
     imageUrl: "img/prensa/prensa2004/prensa16.jpg",
     description: ``
 },
 //prensa 17
 {
-    title: `Clemente`,
-    subtitle: `Clarín, contratapa. 27 de Septiembre de 1994`,
-    imageUrl: "img/prensa/prensa17.gif",
-    description: `El dibujante Caloi, padre del famoso personaje “Clemente” que siempre a acompaña con humor y profundidad la realidad argentina desde la Contratapa del matutino Clarín adhirió el mismo día de la campaña, con una historieta alusiva.      
-    `
+    title: `Análisis de la actualidad`,
+    subtitle: `Paraná, Entre Ríos`,
+    imageUrl: "img/prensa/prensa2004/prensa17.jpg",
+    description: ``
 },
 //prensa 18
 {
-    title: `Rep`,
-    subtitle: `Página 12, contratapa. 27 de Septiembre de 1994`,
-    imageUrl: "img/prensa/prensa18.gif",
-    description: `Rep, el dibujante de Lukas, el comic de la contratapa del diario Argentino Página 12, se sumo también desde su espacio, a la campaña de prevención.      
-    `
+    title: `Botella Mar`,
+    subtitle: `Gobierno de Tierra del fuego`,
+    imageUrl: "img/prensa/prensa2004/prensa18.jpg",
+    description: ``
+},
+//prensa 19
+{
+    title: `Catamarca al día`,
+    subtitle: `Catamarca`,
+    imageUrl: "img/prensa/prensa2004/prensa19.jpg",
+    description: ``
+},
+//prensa 20
+{
+    title: `Pintar paredes`,
+    subtitle: `Clarin.com`,
+    imageUrl: "img/prensa/prensa2004/prensa20.jpg",
+    description: ``
+},
+//prensa 21
+{
+    title: `Alumnos de la UNSJ participaran en un testeo masivo de VIH`,
+    subtitle: `Yahoo noticias`,
+    imageUrl: "img/prensa/prensa2004/prensa21.jpg",
+    description: `Jueves 25 de Noviembre de 2004`
+},
+//prensa 22
+{
+    title: `La revolución peligrosa`,
+    subtitle: ``,
+    imageUrl: "img/prensa/prensa2004/prensa22.jpg",
+    description: ``
+},
+//prensa 23
+{
+    title: `Pintata`,
+    subtitle: `Paraguay`,
+    imageUrl: "img/prensa/prensa2004/prensa23.jpg",
+    description: ``
+},
+//prensa 24
+{
+    title: `El despertador`,
+    subtitle: `Córdoba`,
+    imageUrl: "img/prensa/prensa2004/prensa24.jpg",
+    description: ``
+},
+//prensa 25
+{
+    title: `La Unión`,
+    subtitle: ``,
+    imageUrl: "img/prensa/prensa2004/prensa25.jpg",
+    description: ``
+},
+//prensa 26
+{
+    title: `Una pincelada de conciencia`,
+    subtitle: `Estilo`,
+    imageUrl: "img/prensa/prensa2004/prensa26.jpg",
+    description: ``
+},
+//prensa 27
+{
+    title: `La foto del día`,
+    subtitle: ``,
+    imageUrl: "img/prensa/prensa2004/prensa27.jpg",
+    description: ``
+},
+//prensa 28
+{
+    title: `El liberal on line`,
+    subtitle: `Santiago del estero`,
+    imageUrl: "img/prensa/prensa2004/prensa28.jpg",
+    description: `10-11-2004`
+},
+//prensa 29
+{
+    title: `El arte se suma a la lucha contra el HIV`,
+    subtitle: `El litoral`,
+    imageUrl: "img/prensa/prensa2004/prensa29.jpg",
+    description: `05-11-2004`
+},
+//prensa 30
+{
+    title: `Entregaran preservativos en boliches bailables`,
+    subtitle: `El once`,
+    imageUrl: "img/prensa/prensa2004/prensa30.jpg",
+    description: ``
+},
+//prensa 31
+{
+    title: `Río Gallegos adhirió a la campaña mundial`,
+    subtitle: `El periódico austral`,
+    imageUrl: "img/prensa/prensa2004/prensa31.jpg",
+    description: ``
+},
+//prensa 32
+{
+    title: `Pintan murales y "graffits"`,
+    subtitle: ``,
+    imageUrl: "img/prensa/prensa2004/prensa32.jpg",
+    description: ``
+},
+//prensa 33
+{
+    title: `Prevención de SIDA`,
+    subtitle: ``,
+    imageUrl: "img/prensa/prensa2004/prensa33.jpg",
+    description: `08-11-2004`
+},
+//prensa 34
+{
+    title: `Programa provincial`,
+    subtitle: `La opinión austral`,
+    imageUrl: "img/prensa/prensa2004/prensa34.jpg",
+    description: `23-10-2004`
+},
+//prensa 35
+{
+    title: `Día mundial del SIDA`,
+    subtitle: `El Mercurio, calama`,
+    imageUrl: "img/prensa/prensa2004/prensa35.jpg",
+    description: ``
+},
+//prensa 36
+{
+    title: `Río Gallegos adhirió a la campaña mundial`,
+    subtitle: `Santa cruz`,
+    imageUrl: "img/prensa/prensa2004/prensa36.jpg",
+    description: `16-11-2004`
+},
+//prensa 37
+{
+    title: `Por Amor Usa Preservativos`,
+    subtitle: `Noticias Paraguayas(NP)`,
+    imageUrl: "img/prensa/prensa2004/prensa37.jpg",
+    description: ``
+},
+//prensa 38
+{
+    title: `NO`,
+    subtitle: `Pagina 12`,
+    imageUrl: "img/prensa/prensa2004/prensa38.jpg",
+    description: ``
+},
+//prensa 39
+{
+    title: `En los bosques de palermo.Rock y danza`,
+    subtitle: ``,
+    imageUrl: "img/prensa/prensa2004/prensa39.jpg",
+    description: ``
+},
+//prensa 40
+{
+    title: `Un graffiti como herramienta de prevención del SIDA`,
+    subtitle: ``,
+    imageUrl: "img/prensa/prensa2004/prensa40.jpg",
+    description: `08-11-2004`
+},
+//prensa 41
+{
+    title: `Artistas locales comenzaron un mural`,
+    subtitle: `Primera Linea online`,
+    imageUrl: "img/prensa/prensa2004/prensa41.jpg",
+    description: `16-11-2004`
+},
+//prensa 42
+{
+    title: `Gran repercusión`,
+    subtitle: ``,
+    imageUrl: "img/prensa/prensa2004/prensa42.jpg",
+    description: ``
+},
+//prensa 43
+{
+    title: `Por amor usá preservativo`,
+    subtitle: `Provincia 23`,
+    imageUrl: "img/prensa/prensa2004/prensa43.jpg",
+    description: `26-11-2004`
+},
+//prensa 44
+{
+    title: `Por amor usá preservativo`,
+    subtitle: `Primera Linea online`,
+    imageUrl: "img/prensa/prensa2004/prensa44.jpg",
+    description: `16-11-2004`
+},
+//prensa 45
+{
+    title: `Pintan paredes por campaña del SIDA`,
+    subtitle: `Tiempo Fueguino`,
+    imageUrl: "img/prensa/prensa2004/prensa45.jpg",
+    description: ``
+},
+//prensa 46
+{
+    title: `Por amor usa preservativo`,
+    subtitle: `Tiempo Fueguino`,
+    imageUrl: "img/prensa/prensa2004/prensa46.jpg",
+    description: ``
 },
 ];
 
