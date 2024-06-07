@@ -649,12 +649,12 @@ function showImagePrensa2004(index2004) {
         lightboxContent2004.innerHTML = `
             <div class="infoPrensa">
                 <div class="row">
-                    <div class="col-6">
+                    <div class="col-12">
                         <h2>${card2004.title}</h2>
                         <h3>${card2004.subtitle}</h3>
                         <p>${card2004.description}</p>
                     </div>
-                    <div class="col-6 border-start  border-1 text-center">
+                    <div class="col-12  text-center">
                         <img src="${card2004.imageUrl}" alt="${card2004.title} class="">
                     </div>
                 </div>
@@ -667,6 +667,31 @@ function showImagePrensa2004(index2004) {
     }
     
 }
+
+function prevprensa2004(event) {
+    if (currentIndex > 0) {
+        currentIndex--;
+    } else {
+        currentIndex = cardsPrensa2004Data.length - 1;
+    }
+    console.log('Current index:', currentIndex);  // Verificar el valor de currentIndex
+    showImagePrensa2004(currentIndex);
+}
+
+function nextprensa2004(event) {
+    if (currentIndex < cardsData.length - 1) {
+        currentIndex++;
+    } else {
+        currentIndex = 0;
+    }
+    console.log('Current index:', currentIndex);  // Verificar el valor de currentIndex
+    showImagePrensa2004(currentIndex);
+}
+
+function closeLightboxPrensa2004(){
+    const lightbox = document.getElementById('lightbox-prensa-2004');
+    lightbox.style.display = 'none';  
+  }
 
 function hidePrensa2004(event) {
     if (event.target.id === 'lightbox-prensa-2004') {
