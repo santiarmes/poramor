@@ -123,4 +123,35 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
+//adhesiones
+
+function openTabadh(evt, tabName) {
+  // Declarar todas las variables
+  var i, tabcontentadh, tablinksadh;
+
+  // Ocultar todo el contenido de las solapas
+  tabcontentadh = document.getElementsByClassName("tab-content-adh");
+  for (i = 0; i < tabcontentadh.length; i++) {
+      tabcontentadh[i].style.display = "none";
+  }
+
+  // Eliminar la clase "active" de todos los enlaces de las solapas
+  tablinksadh = document.getElementsByClassName("tab-link-adh");
+  for (i = 0; i < tablinksadh.length; i++) {
+      tablinksadh[i].className = tablinksadh[i].className.replace(" active", "");
+  }
+
+  // Mostrar la solapa actual y añadir una clase "active" al botón que abrió la solapa
+  document.getElementById(tabName).style.display = "block";
+  evt.currentTarget.className += " active";
+}
+
+
+
+// Mostrar la primera solapa por defecto
+document.addEventListener("DOMContentLoaded", function() {
+  document.getElementsByClassName("tab-content-adh")[0].style.display = "block";
+});
+
+
 

@@ -17,7 +17,11 @@
     html {
       scroll-padding-top: 86px; /* Ajusta este valor según lo necesites */
       scroll-behavior: smooth;
-  }
+    }
+
+    ul{
+      list-style: none;
+    }
 
 
   /*Textos en general*/
@@ -151,7 +155,7 @@
     
       .nav-main ul.nav-menu{
       background: var(--color-principal);
-      
+      box-shadow: 10px 5px 15px rgba(0, 0, 0, 0.3);      
       display: block;
       height: 100%;
       left: 0;
@@ -171,6 +175,7 @@
     .nav-main ul.nav-menu li{      
       font-size: 17px;
       padding: 14px;
+      margin-bottom: 15px;
     }
 
     a {  
@@ -435,8 +440,9 @@
 }
 
 .lightbox img {
-  max-width: 80%;
+  width: 400px;
   max-height: 90%;
+  border-radius: 6px;
 }
 
 
@@ -456,7 +462,7 @@
   width: 50%;
   max-height: 95%;
   box-sizing: border-box;
-  overflow-y: scroll;
+  overflow-y:auto;
   
  
 }
@@ -477,6 +483,7 @@
   height: auto;
   padding: 20px;   
   border: 3px double #fff;
+  position: relative;
 
 }
 
@@ -487,7 +494,6 @@ height: auto;
 .infoPrensa h2 {
   margin-bottom: 10px;
   font-size: 1rem;
-  overflow-wrap: ; /* Allow long words to break */
   text-transform: uppercase;
 }
 
@@ -524,6 +530,7 @@ height: auto;
 
 
 
+/*BOTONES*/
 
 .nav-btn {  
   top: 50%;
@@ -547,35 +554,26 @@ height: auto;
 
 #closeBtn{
   position: absolute;
+  font-size: 1.5rem;
   top: 50%;
   left:50%; 
-  transform: translate(450%, -450%);
+  transform: translate(550%, -800%);
 }
 
 #closeBtnPrensa,#closeBtnPrensa2004{
   position: absolute;
-  top: 50%;
-  left:50%; 
-  transform: translate(700%, -800%);
+  top: 5px;
+  right:5px;  
+  font-size: 1.5rem;
+  color: white;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0 0px;
+  user-select: none;
+  display: flex;  
+  /* transform: translate(700%, -800%); */
 }
-
-/* @media(max-width:1475px){
-  #closeBtn{
-    left:59%;
-  }
-}
-
-@media(max-width:658px){
-  #closeBtn{
-    left:69%;
-  }
-}
-
-@media(max-width:415px){
-  #closeBtn{
-    left:82%;
-  }
-} */
 
 #prevBtnprensa {
   display: flex; 
@@ -651,13 +649,27 @@ height: auto;
 
 
 /* Estilos para los botones de las solapas */
+
+
+#tab1adh{
+  background-color:rgb(50, 77, 199);
+}
+
+#tab2adh{
+  background-color: rgb(50, 172, 1);
+}
+
+#tab3adh{
+  background-color:rgb(197, 94, 197);
+}
+
 .tabs {
   margin-top: 30px;
   display: flex;
   border-bottom: 1px solid #ccc;
 }
 
-.tab-link {
+.tab-link{
   background-color: var(--color-principal);
   border: none;
   padding: 14px 50px;
@@ -668,7 +680,50 @@ height: auto;
   border-top-right-radius: 5px;
 }
 
+.tab-link-adh {
+  background-color:rgb(50, 77, 199);
+  border: none;
+  padding: 14px 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.tab-link-adh-entidades {
+  background-color: rgb(50, 172, 1);
+  border: none;
+  padding: 14px 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+.tab-link-adh-salud {
+  background-color:rgb(197, 94, 197);
+  border: none;
+  padding: 14px 50px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  color: #fff;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+
+
 .tab-link:hover {
+  background-color: #ddd;
+}
+
+.tab-link-adh:hover {
+  background-color: #ddd;
+}
+.tab-link-adh-entidades:hover {
+  background-color: #ddd;
+}
+.tab-link-adh-salud:hover {
   background-color: #ddd;
 }
 
@@ -677,8 +732,13 @@ height: auto;
   color: #000;
 }
 
+.tab-link-adh.active {
+  /* background-color: #ffffff;
+  color: #000; */
+}
+
 /* Estilos para el contenido de las solapas */
-.tab-content {
+.tab-content, .tab-content-adh {
   display: none;
   padding: 20px;
   
@@ -816,6 +876,15 @@ height: auto;
   align-items: center;
 }
 
+
+
+
+.list-item{
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.9rem;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #fff;
+}
 
 
 

@@ -326,10 +326,10 @@
           </div>
 
         <div id="lightbox" class="lightbox" onclick="hideImage(event)">
-          <button id="prevBtn" class="nav-btn" onclick="prevImage()">&#10094;</button>
+          <button id="prevBtn" class="nav-btn" onclick="prevImage()"><i class="fa-solid fa-chevron-left"></i></button>
           <img id="lightbox-img" src="" alt="">
-          <button id="nextBtn" class="nav-btn" onclick="nextImage()">&#10095;</button> 
-          <button id="closeBtn" class="nav-btn" onclick="closeLightbox()">x</button>                 
+          <button id="nextBtn" class="nav-btn" onclick="nextImage()"><i class="fa-solid fa-chevron-right"></i></button> 
+          <button id="closeBtn" class="nav-btn" onclick="closeLightbox()"><i class="fa-solid fa-xmark"></i></button> 
         </div>
 
 
@@ -347,13 +347,13 @@
                     <button class="tab-link" onclick="openTab(event, 'tab2')">2004</button>
                 </div>
                 <div id="tab1" class="tab-content">
-                    <h2>1994</h2>
-                    <p>Notas de prensa</p>
+                    <!-- <h2>1994</h2>
+                    <p>Notas de prensa</p> -->
                     <div class="gallery-prensa" id="gallery-prensa"></div>   
                 </div>
                 <div id="tab2" class="tab-content" style="display:none">
-                    <h2>2004</h2>
-                    <p>Notas de prensa y portales</p>
+                    <!-- <h2>2004</h2>
+                    <p>Notas de prensa y portales</p> -->
                     <div class="gallery-prensa" id="gallery-prensa-2004"></div> 
                 </div>
             </div>                        
@@ -366,7 +366,7 @@
                   <button id="prevBtnprensa" class="nav-btn" onclick="prevprensa()"><i class="fa-solid fa-chevron-left"></i></button>  
                   <div id="lightbox-inner-content"></div>                  
                   <button id="nextBtnprensa" class="nav-btn" onclick="nextprensa()"><i class="fa-solid fa-chevron-right"></i></button>  
-                  <button id="closeBtnPrensa" class="nav-btn" onclick="closeLightboxPrensa()"><i class="fa-regular fa-circle-xmark"></i></button> 
+                  
                                               
             </div>
 
@@ -376,7 +376,7 @@
                       <button id="prevBtnprensa" class="nav-btn" onclick="prevprensa2004()"><i class="fa-solid fa-chevron-left"></i></button>                
                       <div id="lightbox-inner-content-2004"></div>
                       <button id="nextBtnprensa2004" class="nav-btn" onclick="nextprensa2004()"><i class="fa-solid fa-chevron-right"></i></button>  
-                      <button id="closeBtnPrensa2004" class="nav-btn" onclick="closeLightboxPrensa2004()"><i class="fa-regular fa-circle-xmark"></i></button>                   
+                      <!-- <button id="closeBtnPrensa2004" class="nav-btn" onclick="closeLightboxPrensa2004()"><i class="fa-regular fa-circle-xmark"></i></button>                    -->
                 </div>
 
 
@@ -386,39 +386,60 @@
     </div>
   </section> 
 
-  <!-- <section id="adhesiones" class="section position-relative">
+  <section id="adhesiones" class="section position-relative">
     <div class="row h-100">
       <div class="col-md-12 h-100">
         <div class="position-relative h-100">
-          <img src="img/sections/proyecto2005.jpg" class="img-fluid img-encuadre" alt="Graffiti Image">
-          <div class="info-box">
+          <div class="info-box-prensa">
             <h2>Adhesiones</h2>
-            <ul class="nav nav-tabs" id="myTab" role="tablist">
-              <li class="nav-item" role="presentation">
-                <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Artistas/Personalidades</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Entidades de bien público/Agrupaciones</button>
-              </li>
-              <li class="nav-item" role="presentation">
-                <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Profesionales de la salud</button>
-              </li>
-            </ul>
-            <div class="tab-content" id="myTabContent">
-              <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p>Lorem ipsum dolor sit amet.</p>
-                <p>Lorem ipsum dolor sit amet.</p>
+            <div class="tab-container">
+              <div class="tabs">
+                  <button class="tab-link-adh active" onclick="openTabadh(event, 'tab1adh')">ARTISTAS / PERSONALIDADES</button>
+                  <button class="tab-link-adh-entidades" onclick="openTabadh(event, 'tab2adh')">ENTIDADES DE BIEN<br>PUBLICO / AGRUPACIONES</button>
+                  <button class="tab-link-adh-salud" onclick="openTabadh(event, 'tab3adh')">PROFESIONALES DE LA SALUD</button>
               </div>
-              <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">hola</div>
-              <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">...</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>  -->
+              <div id="tab1adh" class="tab-content-adh">
+                <div class="row">
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul id="ul-artistas-1"></ul>   
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul id="ul-artistas-2"></ul>   
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul id="ul-artistas-3"></ul>  
+                  </div>
+                </div>            
+              </div>
+              <div id="tab2adh" class="tab-content-adh" style="display:none">
+                <div class="row">
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul id="ul-entidades-1"></ul>   
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul id="ul-entidades-2"></ul>   
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul id="ul-entidades-3"></ul>  
+                  </div>
+                </div>    
+              </div>
+              <div id="tab3adh" class="tab-content-adh" style="display:none">
+                <div class="row">
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul id="ul-salud-1"></ul>   
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul id="ul-salud-2"></ul>   
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                    <ul id="ul-salud-3"></ul>  
+                  </div>
+                </div>    
+              </div>
+          </div>  
+            
+  </section>  
 
   <section id="graffiti" class="section position-relative">
   <div class="row h-100">

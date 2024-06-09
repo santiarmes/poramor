@@ -221,6 +221,7 @@ function showImagePrensa(index) {
     if (card) {
         lightboxContent.innerHTML = `
         <div class="infoPrensa">
+        <button id="closeBtnPrensa"  onclick="closeLightboxPrensa()"><i class="fa-solid fa-xmark"></i></button> 
             <div class="row">
                 <div class="col-md-6 col-sm-12">
                     <h2>${card.title}</h2>
@@ -230,6 +231,7 @@ function showImagePrensa(index) {
                 <div class="col-md-6 col-sm-12 text-center">
                     <img src="${card.imageUrl}" alt="${card.title} class="">
                 </div>
+                
             </div>
         </div>
         `;
@@ -648,6 +650,7 @@ function showImagePrensa2004(index2004) {
     if (card2004) {
         lightboxContent2004.innerHTML = `
             <div class="infoPrensa">
+            <button id="closeBtnPrensa2004"  onclick="closeLightboxPrensa2004()"><i class="fa-solid fa-xmark"></i></button> 
                 <div class="row">
                     <div class="col-12">
                         <h2>${card2004.title}</h2>
