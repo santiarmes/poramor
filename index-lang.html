@@ -8,12 +8,21 @@
 </head>
 <body>
     <script>
-      // Obtener la URL de la página principal
-      const originalUrl = window.location.origin + window.location.pathname.replace('index-lang.html', 'original-index.html');
-        
-        // Redirigir a Google Translate para traducir la página principal
-        const translateUrl = "https://translate.google.com/translate?sl=auto&u=" + encodeURIComponent(originalUrl);
-        window.location.href = translateUrl;
+                (function() {
+            // Obtén el parámetro de idioma de la URL
+            const urlParams = new URLSearchParams(window.location.search);
+            const lang = urlParams.get('lang');
+            
+            if (lang) {
+                // Construye la URL de traducción de Google Translate
+                const originalUrl = window.location.origin + window.location.pathname.replace('index-lang.html', 'original-index.html');
+                const translateUrl = "https://translate.google.com/translate?sl=auto&tl=" + lang + "&u=" + encodeURIComponent(originalUrl);
+                window.location.href = translateUrl;
+            } else {
+                // Si no hay parámetro de idioma, muestra un mensaje de error o redirige a un idioma predeterminado
+                document.body.innerHTML = "<p>Error: No se ha especificado un idioma.</p>";
+            }
+        })();
     </script>
 </body>
 </html>
