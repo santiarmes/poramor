@@ -21,8 +21,8 @@
       </div>
       <ul class="nav-menu">
         <li><a href="#presentacion">Presentación</a></li>
-        <li><a href="#proyecto2005">Proyecto&nbsp;2005</a></li>
-        <li><a href="#comoParticipar">Participar</a></li>
+        <li><a href="#proyecto2005">Proyecto&nbsp;2004/2005</a></li>
+        <li><a href="#comoParticipar">Como participar</a></li>
         <li><a href="#fotos">Fotos</a></li>
         <li><a href="#prensa">Prensa</a></li>
         <li><a href="#adhesiones">Adhesiones</a></li>
@@ -32,9 +32,12 @@
       </ul>
     </nav>
    </div>
-   <!-- Navbar -->
 
-   <!-- Hero -->
+  
+
+<!-- Principal -->
+<div class="container-fluid gral-background">
+ <!-- Hero -->
    <div id="home" class="hero">
     <img src="img/sections/hero.jpg" alt="">
     <div class="scroll-down">
@@ -45,10 +48,6 @@
       </a>
   </div>
   </div>
-
-<!-- Principal -->
-<div class="container-fluid gral-background">
-
 <section id="presentacion" class="section position-relative">
     <div class="row h-100">
       <div class="col-md-12  h-100">
@@ -146,7 +145,7 @@
     </div>
   </section>  
 
-  <section id="participa" class="section position-relative">
+  <section id="participa" class="section position-relative d-none">
     <div class="row h-100">
       <div class="col-md-12 h-100">
         <div class="position-relative h-100 img-div">
@@ -346,14 +345,12 @@
                     <button class="tab-link active" onclick="openTab(event, 'tab1')">1994</button>
                     <button class="tab-link" onclick="openTab(event, 'tab2')">2004</button>
                 </div>
-                <div id="tab1" class="tab-content">
-                    <!-- <h2>1994</h2>
-                    <p>Notas de prensa</p> -->
-                    <div class="gallery-prensa" id="gallery-prensa"></div>   
+                <div id="tab1" class="tab-content row">
+                  <div class="col-12">
+                    <div class="gallery-prensa" id="gallery-prensa"></div> 
+                  </div>  
                 </div>
                 <div id="tab2" class="tab-content" style="display:none">
-                    <!-- <h2>2004</h2>
-                    <p>Notas de prensa y portales</p> -->
                     <div class="gallery-prensa" id="gallery-prensa-2004"></div> 
                 </div>
             </div>                        
@@ -393,7 +390,7 @@
           <div class="info-box-prensa">
             <h2>Adhesiones</h2>
             <div class="tab-container">
-              <div class="tabs">
+              <div class="tabs-adh">
                   <button class="tab-link-adh active" onclick="openTabadh(event, 'tab1adh')">ARTISTAS / PERSONALIDADES</button>
                   <button class="tab-link-adh-entidades" onclick="openTabadh(event, 'tab2adh')">ENTIDADES DE BIEN<br>PUBLICO / AGRUPACIONES</button>
                   <button class="tab-link-adh-salud" onclick="openTabadh(event, 'tab3adh')">PROFESIONALES DE LA SALUD</button>
@@ -413,26 +410,26 @@
               </div>
               <div id="tab2adh" class="tab-content-adh" style="display:none">
                 <div class="row">
-                  <div class="col-md-4 col-sm-6 col-xs-12">
+                  <div class="col-md-12 col-sm-12 col-xs-12">
                     <ul id="ul-entidades-1"></ul>   
                   </div>
-                  <div class="col-md-4 col-sm-6 col-xs-12">
+                  <div class="col-md-12 col-sm-12 col-xs-12">
                     <ul id="ul-entidades-2"></ul>   
                   </div>
-                  <div class="col-md-4 col-sm-6 col-xs-12">
+                  <div class="col-md-12 col-sm-12 col-xs-12">
                     <ul id="ul-entidades-3"></ul>  
                   </div>
                 </div>    
               </div>
               <div id="tab3adh" class="tab-content-adh" style="display:none">
                 <div class="row">
-                  <div class="col-md-4 col-sm-6 col-xs-12">
+                  <div class="col-md-12 col-sm-12 col-xs-12">
                     <ul id="ul-salud-1"></ul>   
                   </div>
-                  <div class="col-md-4 col-sm-6 col-xs-12">
+                  <div class="col-md-12 col-sm-12 col-xs-12">
                     <ul id="ul-salud-2"></ul>   
                   </div>
-                  <div class="col-md-4 col-sm-6 col-xs-12">
+                  <div class="col-md-12 col-sm-12 col-xs-12">
                     <ul id="ul-salud-3"></ul>  
                   </div>
                 </div>    
