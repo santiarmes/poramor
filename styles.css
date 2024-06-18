@@ -4,7 +4,7 @@
     --color-white: #ffffff;
     --color-black: #000;  
     --color-gray: #8b8787;
-    --color-rosa: #FC00E1;
+    --color-rosa: #b625a7;
     --color-verde: #019948;
     --color-azul: #2548C9;
    }
@@ -148,7 +148,12 @@
   }
 
   .nav-menu a.active {
-    transform:scale(1.03)
+    background-color: var(--color-principal);
+    color: var(--color-white);
+    /* transform:scale(1.03) */
+    padding: 2px 7px;
+    border-radius: 3px;
+
   }
 
     @media (max-width:1100px) {
@@ -519,6 +524,8 @@ height: auto;
 
 
 
+
+
 /*BOTONES*/
 
 .nav-btn {  
@@ -681,13 +688,11 @@ height: auto;
   }
 }
 
-
 .list-item{
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: 0.8rem;
-  margin-bottom: 20px;  
+  margin-bottom: 30px;  
 }
-
 
 .tab-link-adh {
   font-size:small;
@@ -710,6 +715,7 @@ height: auto;
   color: #fff;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
+
 }
 .tab-link-adh-salud {
   font-size:small;
@@ -722,7 +728,6 @@ height: auto;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
-
 
 
 .tab-link:hover {
@@ -755,8 +760,6 @@ height: auto;
 .tab-content h2 {
   margin-top: 0;
 }
-
-
 
 .nav{
   --bs-nav-link-color: #fff;
