@@ -17,7 +17,7 @@
     }
 
     html {
-      scroll-padding-top: 86px; /* Ajusta este valor según lo necesites */
+      scroll-padding-top: 86px;
       scroll-behavior: smooth;
     }
 
@@ -25,8 +25,6 @@
       list-style: none;
     }
 
-
-  /*Textos en general*/
   h2{
     color: white;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
@@ -41,9 +39,7 @@
 
   p{
     color: white;
-  }
-
-    
+  }    
 
   body {
     background-image: url('/img/background-image.jpg');      
@@ -92,13 +88,11 @@
       z-index: 1;     
     }
 
-    .nav-main{
-      
+    .nav-main{      
       align-items: center;
       display:flex;
       font-size: 17px;
-      font-family: Verdana, Geneva, Tahoma, sans-serif; 
-      
+      font-family: Verdana, Geneva, Tahoma, sans-serif;       
       justify-content: space-around;
       padding:  20px 20px;  
       flex-wrap: wrap;   
@@ -150,10 +144,8 @@
   .nav-menu a.active {
     background-color: var(--color-principal);
     color: var(--color-white);
-    /* transform:scale(1.03) */
     padding: 2px 7px;
     border-radius: 3px;
-
   }
 
     @media (max-width:1100px) {
@@ -289,12 +281,9 @@
       .imagenSection img{
         display:none;
       }
-    }
-  
+    } 
 
- 
-    /*INFO BOX*/
-
+  /*INFO BOX*/
   .info-box {
     position:absolute;
     top: 50%;
@@ -329,8 +318,7 @@
     margin-bottom: 10px;
     font-size: 1.375rem;
     overflow-wrap: break-word; 
-    text-transform: uppercase;
-    
+    text-transform: uppercase;    
   }
 
   /*Subtitulos*/
@@ -370,15 +358,15 @@
   .info-box-prensa h2 {
     margin-bottom: 10px;
     font-size: 1.375rem;
-    overflow-wrap: break-word; /* Allow long words to break */
+    overflow-wrap: break-word;
     text-transform: uppercase;
-    white-space: nowrap; /* Prevent text from wrapping */
+    white-space: nowrap;
   }
 
   .img-fluid {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ensure the image covers the entire container */
+    object-fit: cover;
   }
 
   .image-container img {
@@ -480,7 +468,6 @@
   padding: 20px;   
   border: 3px double #fff;
   position: relative;
-
 }
 
 .infoPrensa img{
@@ -520,14 +507,7 @@ height: auto;
   border-color: #000;
 }
 
-
-
-
-
-
-
 /*BOTONES*/
-
 .nav-btn {  
   top: 50%;
   font-size: 2em;
@@ -568,7 +548,6 @@ height: auto;
   padding: 0 0px;
   user-select: none;
   display: flex;  
-  /* transform: translate(700%, -800%); */
 }
 
 #prevBtnprensa {
@@ -579,17 +558,8 @@ height: auto;
   display: flex;   
 }
 
-
-
-
-
-
-
-
-  /*Download*/
-
-  .download-box{
-    
+/*Download*/
+  .download-box{    
     width: 100%;
     height: 130px;
     display: flex;
@@ -658,10 +628,6 @@ height: auto;
   border-bottom: 1px solid #ccc;
 }
 
-.tab-container{
-
-}
-
 .tab-link{
   background-color: var(--color-principal);
   border: none;
@@ -676,8 +642,7 @@ height: auto;
 .tabs-adh{
   margin-top: 30px;
   display: flex; 
-  justify-content: start;  
-  
+  justify-content: start;    
   flex-direction: row;
   width: 100%;
 }
@@ -705,6 +670,7 @@ height: auto;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
+
 .tab-link-adh-entidades {
   font-size:small;
   background-color: var(--color-verde);
@@ -715,8 +681,8 @@ height: auto;
   color: #fff;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-
 }
+
 .tab-link-adh-salud {
   font-size:small;
   background-color:var(--color-rosa);
@@ -729,7 +695,6 @@ height: auto;
   border-top-right-radius: 5px;
 }
 
-
 .tab-link:hover {
   background-color: #ddd;
 }
@@ -737,9 +702,11 @@ height: auto;
 .tab-link-adh:hover {
   background-color: #ddd;
 }
+
 .tab-link-adh-entidades:hover {
   background-color: #ddd;
 }
+
 .tab-link-adh-salud:hover {
   background-color: #ddd;
 }
@@ -752,8 +719,7 @@ height: auto;
 /* Estilos para el contenido de las solapas */
 .tab-content, .tab-content-adh {
   display: none;
-  padding: 20px;
-  
+  padding: 20px;  
   border-top: none;
 }
 
@@ -804,10 +770,7 @@ height: auto;
   top:20%;
 }
 
-
-
 /*Backgrounds*/
-
 .background-img-presentacion{
   width: 100%;
   height: 100%;
@@ -862,6 +825,7 @@ height: auto;
   width: 100%;
   height: 100%;
 }
+
 .swiper-slide {
   text-align: center;
   font-size: 18px;
